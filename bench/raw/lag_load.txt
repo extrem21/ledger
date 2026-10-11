@@ -1,0 +1,82 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: bench/write_throughput.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 40 max VUs, 40s max duration (incl. graceful stop):
+              * write: 20.00 iterations/s for 10s (maxVUs: 20-40, gracefulStop: 30s)
+
+
+running (01.0s), 00/20 VUs, 20 complete and 0 interrupted iterations
+write   [  10% ] 00/20 VUs  01.0s/10s  20.00 iters/s
+
+running (02.0s), 00/20 VUs, 40 complete and 0 interrupted iterations
+write   [  20% ] 00/20 VUs  02.0s/10s  20.00 iters/s
+
+running (03.0s), 00/20 VUs, 60 complete and 0 interrupted iterations
+write   [  30% ] 00/20 VUs  03.0s/10s  20.00 iters/s
+
+running (04.0s), 00/20 VUs, 80 complete and 0 interrupted iterations
+write   [  40% ] 00/20 VUs  04.0s/10s  20.00 iters/s
+
+running (05.0s), 00/20 VUs, 100 complete and 0 interrupted iterations
+write   [  50% ] 00/20 VUs  05.0s/10s  20.00 iters/s
+
+running (06.0s), 00/20 VUs, 120 complete and 0 interrupted iterations
+write   [  60% ] 00/20 VUs  06.0s/10s  20.00 iters/s
+
+running (07.0s), 00/20 VUs, 140 complete and 0 interrupted iterations
+write   [  70% ] 00/20 VUs  07.0s/10s  20.00 iters/s
+
+running (08.0s), 00/20 VUs, 160 complete and 0 interrupted iterations
+write   [  80% ] 00/20 VUs  08.0s/10s  20.00 iters/s
+
+running (09.0s), 00/20 VUs, 180 complete and 0 interrupted iterations
+write   [  90% ] 00/20 VUs  09.0s/10s  20.00 iters/s
+
+running (10.0s), 00/20 VUs, 200 complete and 0 interrupted iterations
+write   [ 100% ] 00/20 VUs  10.0s/10s  20.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 201     20.077774/s
+    checks_succeeded...: 100.00% 201 out of 201
+    checks_failed......: 0.00%   0 out of 201
+
+    ✓ status is 201
+
+    HTTP
+    http_req_duration..............: avg=11.84ms min=2.06ms med=7.15ms p(50)=7.15ms p(95)=18.42ms p(99)=167.96ms max=268.72ms
+      { expected_response:true }...: avg=11.84ms min=2.06ms med=7.15ms p(50)=7.15ms p(95)=18.42ms p(99)=167.96ms max=268.72ms
+    http_req_failed................: 0.00% 0 out of 201
+    http_reqs......................: 201   20.077774/s
+
+    EXECUTION
+    iteration_duration.............: avg=12.29ms min=2.47ms med=7.49ms p(50)=7.49ms p(95)=20.52ms p(99)=168.34ms max=269.02ms
+    iterations.....................: 201   20.077774/s
+    vus............................: 0     min=0        max=0 
+    vus_max........................: 20    min=20       max=20
+
+    NETWORK
+    data_received..................: 53 kB 5.2 kB/s
+    data_sent......................: 66 kB 6.5 kB/s
+
+
+
+
+running (10.0s), 00/20 VUs, 201 complete and 0 interrupted iterations
+write ✓ [ 100% ] 00/20 VUs  10s  20.00 iters/s

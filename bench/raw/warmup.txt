@@ -1,0 +1,142 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: bench/write_throughput.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 50 max VUs, 1m0s max duration (incl. graceful stop):
+              * write: 50 looping VUs for 30s (gracefulStop: 30s)
+
+
+running (0m01.0s), 50/50 VUs, 1556 complete and 0 interrupted iterations
+write   [   3% ] 50 VUs  01.0s/30s
+
+running (0m02.0s), 50/50 VUs, 3791 complete and 0 interrupted iterations
+write   [   7% ] 50 VUs  02.0s/30s
+
+running (0m03.0s), 50/50 VUs, 5794 complete and 0 interrupted iterations
+write   [  10% ] 50 VUs  03.0s/30s
+
+running (0m04.0s), 50/50 VUs, 8326 complete and 0 interrupted iterations
+write   [  13% ] 50 VUs  04.0s/30s
+
+running (0m05.0s), 50/50 VUs, 10741 complete and 0 interrupted iterations
+write   [  17% ] 50 VUs  05.0s/30s
+
+running (0m06.0s), 50/50 VUs, 13226 complete and 0 interrupted iterations
+write   [  20% ] 50 VUs  06.0s/30s
+
+running (0m07.0s), 50/50 VUs, 15683 complete and 0 interrupted iterations
+write   [  23% ] 50 VUs  07.0s/30s
+
+running (0m08.0s), 50/50 VUs, 18386 complete and 0 interrupted iterations
+write   [  27% ] 50 VUs  08.0s/30s
+
+running (0m09.0s), 50/50 VUs, 20915 complete and 0 interrupted iterations
+write   [  30% ] 50 VUs  09.0s/30s
+
+running (0m10.0s), 50/50 VUs, 23415 complete and 0 interrupted iterations
+write   [  33% ] 50 VUs  10.0s/30s
+
+running (0m11.0s), 50/50 VUs, 25790 complete and 0 interrupted iterations
+write   [  37% ] 50 VUs  11.0s/30s
+
+running (0m12.0s), 50/50 VUs, 28667 complete and 0 interrupted iterations
+write   [  40% ] 50 VUs  12.0s/30s
+
+running (0m13.0s), 50/50 VUs, 31564 complete and 0 interrupted iterations
+write   [  43% ] 50 VUs  13.0s/30s
+
+running (0m14.0s), 50/50 VUs, 34440 complete and 0 interrupted iterations
+write   [  47% ] 50 VUs  14.0s/30s
+
+running (0m15.0s), 50/50 VUs, 37351 complete and 0 interrupted iterations
+write   [  50% ] 50 VUs  15.0s/30s
+
+running (0m16.0s), 50/50 VUs, 40196 complete and 0 interrupted iterations
+write   [  53% ] 50 VUs  16.0s/30s
+
+running (0m17.0s), 50/50 VUs, 43282 complete and 0 interrupted iterations
+write   [  57% ] 50 VUs  17.0s/30s
+
+running (0m18.0s), 50/50 VUs, 46239 complete and 0 interrupted iterations
+write   [  60% ] 50 VUs  18.0s/30s
+
+running (0m19.0s), 50/50 VUs, 49051 complete and 0 interrupted iterations
+write   [  63% ] 50 VUs  19.0s/30s
+
+running (0m20.0s), 50/50 VUs, 51557 complete and 0 interrupted iterations
+write   [  67% ] 50 VUs  20.0s/30s
+
+running (0m21.0s), 50/50 VUs, 54604 complete and 0 interrupted iterations
+write   [  70% ] 50 VUs  21.0s/30s
+
+running (0m22.0s), 50/50 VUs, 57430 complete and 0 interrupted iterations
+write   [  73% ] 50 VUs  22.0s/30s
+
+running (0m23.0s), 50/50 VUs, 60523 complete and 0 interrupted iterations
+write   [  77% ] 50 VUs  23.0s/30s
+
+running (0m24.0s), 50/50 VUs, 63560 complete and 0 interrupted iterations
+write   [  80% ] 50 VUs  24.0s/30s
+
+running (0m25.0s), 50/50 VUs, 66537 complete and 0 interrupted iterations
+write   [  83% ] 50 VUs  25.0s/30s
+
+running (0m26.0s), 50/50 VUs, 69183 complete and 0 interrupted iterations
+write   [  87% ] 50 VUs  26.0s/30s
+
+running (0m27.0s), 50/50 VUs, 72103 complete and 0 interrupted iterations
+write   [  90% ] 50 VUs  27.0s/30s
+
+running (0m28.0s), 50/50 VUs, 74753 complete and 0 interrupted iterations
+write   [  93% ] 50 VUs  28.0s/30s
+
+running (0m29.0s), 50/50 VUs, 77735 complete and 0 interrupted iterations
+write   [  97% ] 50 VUs  29.0s/30s
+
+running (0m30.0s), 50/50 VUs, 80084 complete and 0 interrupted iterations
+write   [ 100% ] 50 VUs  30.0s/30s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 80166   2670.135807/s
+    checks_succeeded...: 100.00% 80166 out of 80166
+    checks_failed......: 0.00%   0 out of 80166
+
+    ✓ status is 201
+
+    HTTP
+    http_req_duration..............: avg=18.65ms min=2.08ms med=14.76ms p(50)=14.76ms p(95)=44.33ms p(99)=69.5ms  max=206.46ms
+      { expected_response:true }...: avg=18.65ms min=2.08ms med=14.76ms p(50)=14.76ms p(95)=44.33ms p(99)=69.5ms  max=206.46ms
+    http_req_failed................: 0.00% 0 out of 80166
+    http_reqs......................: 80166 2670.135807/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.71ms min=2.16ms med=14.81ms p(50)=14.81ms p(95)=44.38ms p(99)=69.66ms max=206.51ms
+    iterations.....................: 80166 2670.135807/s
+    vus............................: 50    min=50         max=50
+    vus_max........................: 50    min=50         max=50
+
+    NETWORK
+    data_received..................: 21 MB 697 kB/s
+    data_sent......................: 26 MB 877 kB/s
+
+
+
+
+running (0m30.0s), 00/50 VUs, 80166 complete and 0 interrupted iterations
+write ✓ [ 100% ] 50 VUs  30s

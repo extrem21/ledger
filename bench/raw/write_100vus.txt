@@ -1,0 +1,112 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: bench/write_throughput.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 100 max VUs, 50s max duration (incl. graceful stop):
+              * write: 100 looping VUs for 20s (gracefulStop: 30s)
+
+
+running (01.0s), 100/100 VUs, 2665 complete and 0 interrupted iterations
+write   [   5% ] 100 VUs  01.0s/20s
+
+running (02.0s), 100/100 VUs, 5502 complete and 0 interrupted iterations
+write   [  10% ] 100 VUs  02.0s/20s
+
+running (03.0s), 100/100 VUs, 8420 complete and 0 interrupted iterations
+write   [  15% ] 100 VUs  03.0s/20s
+
+running (04.0s), 100/100 VUs, 11309 complete and 0 interrupted iterations
+write   [  20% ] 100 VUs  04.0s/20s
+
+running (05.0s), 100/100 VUs, 13847 complete and 0 interrupted iterations
+write   [  25% ] 100 VUs  05.0s/20s
+
+running (06.0s), 100/100 VUs, 16603 complete and 0 interrupted iterations
+write   [  30% ] 100 VUs  06.0s/20s
+
+running (07.0s), 100/100 VUs, 19454 complete and 0 interrupted iterations
+write   [  35% ] 100 VUs  07.0s/20s
+
+running (08.0s), 100/100 VUs, 22244 complete and 0 interrupted iterations
+write   [  40% ] 100 VUs  08.0s/20s
+
+running (09.0s), 100/100 VUs, 24747 complete and 0 interrupted iterations
+write   [  45% ] 100 VUs  09.0s/20s
+
+running (10.0s), 100/100 VUs, 27758 complete and 0 interrupted iterations
+write   [  50% ] 100 VUs  10.0s/20s
+
+running (11.0s), 100/100 VUs, 30110 complete and 0 interrupted iterations
+write   [  55% ] 100 VUs  11.0s/20s
+
+running (12.0s), 100/100 VUs, 32960 complete and 0 interrupted iterations
+write   [  60% ] 100 VUs  12.0s/20s
+
+running (13.0s), 100/100 VUs, 35593 complete and 0 interrupted iterations
+write   [  65% ] 100 VUs  13.0s/20s
+
+running (14.0s), 100/100 VUs, 38267 complete and 0 interrupted iterations
+write   [  70% ] 100 VUs  14.0s/20s
+
+running (15.0s), 100/100 VUs, 40940 complete and 0 interrupted iterations
+write   [  75% ] 100 VUs  15.0s/20s
+
+running (16.0s), 100/100 VUs, 43605 complete and 0 interrupted iterations
+write   [  80% ] 100 VUs  16.0s/20s
+
+running (17.0s), 100/100 VUs, 46420 complete and 0 interrupted iterations
+write   [  85% ] 100 VUs  17.0s/20s
+
+running (18.0s), 100/100 VUs, 49316 complete and 0 interrupted iterations
+write   [  90% ] 100 VUs  18.0s/20s
+
+running (19.0s), 100/100 VUs, 51853 complete and 0 interrupted iterations
+write   [  95% ] 100 VUs  19.0s/20s
+
+running (20.0s), 100/100 VUs, 54284 complete and 0 interrupted iterations
+write   [ 100% ] 100 VUs  20.0s/20s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 54399   2715.871711/s
+    checks_succeeded...: 100.00% 54399 out of 54399
+    checks_failed......: 0.00%   0 out of 54399
+
+    ✓ status is 201
+
+    HTTP
+    http_req_duration..............: avg=36.73ms min=2.09ms med=29.69ms p(50)=29.69ms p(95)=90.1ms  p(99)=144.52ms max=333.1ms 
+      { expected_response:true }...: avg=36.73ms min=2.09ms med=29.69ms p(50)=29.69ms p(95)=90.1ms  p(99)=144.52ms max=333.1ms 
+    http_req_failed................: 0.00% 0 out of 54399
+    http_reqs......................: 54399 2715.871711/s
+
+    EXECUTION
+    iteration_duration.............: avg=36.78ms min=2.12ms med=29.74ms p(50)=29.74ms p(95)=90.15ms p(99)=144.56ms max=333.18ms
+    iterations.....................: 54399 2715.871711/s
+    vus............................: 100   min=100        max=100
+    vus_max........................: 100   min=100        max=100
+
+    NETWORK
+    data_received..................: 14 MB 709 kB/s
+    data_sent......................: 18 MB 891 kB/s
+
+
+
+
+running (20.0s), 000/100 VUs, 54399 complete and 0 interrupted iterations
+write ✓ [ 100% ] 100 VUs  20s
