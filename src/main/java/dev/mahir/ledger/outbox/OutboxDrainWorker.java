@@ -13,8 +13,7 @@ import java.util.List;
 
 /**
  * Claims and publishes one batch of pending outbox events. Called through
- * the Spring proxy by OutboxScheduler (a different bean) — see CLAUDE.md §5
- * Trap 1: if the scheduling loop lived in this same class and called this
+ * the Spring proxy by OutboxScheduler (a different bean) — if the scheduling loop lived in this same class and called this
  * method on `this`, @Transactional would silently do nothing.
  */
 @Component

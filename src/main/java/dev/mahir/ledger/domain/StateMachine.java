@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * The order lifecycle, encoded as one explicit transition table rather than
- * scattered conditionals. See LEDGER_SPEC.md §3 for the diagram this mirrors.
+ * scattered conditionals. See the README diagram for the full flow.
  */
 public final class StateMachine {
 

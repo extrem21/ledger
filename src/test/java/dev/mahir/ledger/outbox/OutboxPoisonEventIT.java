@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * T5 from LEDGER_SPEC.md §9 — a poison event (webhook sink always returns
+ * T5 — a poison event (webhook sink always returns
  * 500 for it) must reach DEAD after exactly MAX_ATTEMPTS, with growing
  * backoff, while other events keep publishing normally throughout.
  *

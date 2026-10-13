@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Benchmark orchestrator (LEDGER_SPEC.md §10):
+# Benchmark orchestrator:
 #  - 30s warmup, discarded
 #  - write throughput: POST /orders at 10/25/50/100 VUs, p50/p95/p99
 #  - end-to-end lag: commit (orders.created_at) -> projection applied
@@ -9,7 +9,7 @@
 #    outbox to isolate drain speed from write-path speed
 #
 # Raw output lands in bench/raw/; bench/results.md is written by hand from
-# these real runs (see DEVLOG.md) rather than auto-generated, so numbers
+# these real runs (see bench/raw/) rather than auto-generated, so numbers
 # are never silently mis-parsed.
 set -uo pipefail
 cd "$(dirname "$0")/.."

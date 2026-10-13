@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/** T7 from LEDGER_SPEC.md §9 — table-driven illegal transitions. */
+/** T7 — table-driven illegal transitions. */
 class OrderTransitionIT extends IntegrationTestBase {
 
     private static final String BODY = """

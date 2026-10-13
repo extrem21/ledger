@@ -130,8 +130,7 @@ the outbox or write path.
 
 ## Results
 
-All numbers below are measured, not estimated — see `DEVLOG.md` for the
-full narrative including what went wrong along the way.
+All numbers below are measured, not estimated. Raw benchmark output lives in `bench/raw/`.
 
 | Test | What it proves | Result |
 |---|---|---|

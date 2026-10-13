@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/** T2, T3, T4 from LEDGER_SPEC.md §9. */
+/** T2, T3, T4: sequential, concurrent and conflicting idempotency-key submissions. */
 class OrderIdempotencyIT extends IntegrationTestBase {
 
     private static final String BODY = """

@@ -18,9 +18,10 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * T8 from LEDGER_SPEC.md §9 — inject a failure between the order insert and
+ * T8 — inject a failure between the order insert and
  * the outbox insert and assert zero rows land in either table. This is the
- * direct test for the two Spring traps in CLAUDE.md §5.
+ * direct test for two Spring traps: self-invocation bypassing @Transactional,
+ * and checked exceptions committing instead of rolling back.
  */
 @Import(OrderAtomicityIT.FailingOutboxConfig.class)
 class OrderAtomicityIT extends IntegrationTestBase {

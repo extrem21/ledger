@@ -35,7 +35,8 @@ import java.util.UUID;
 /**
  * The transactional entry point for the write path. Every public method here
  * is called directly from OrderController (a different bean), so Spring's
- * @Transactional proxy is always in play — see CLAUDE.md §5 Trap 1.
+ * @Transactional proxy is always in play (a self-invocation via `this` would
+ * bypass the proxy and silently run without a transaction).
  */
 @Service
 public class OrderService {

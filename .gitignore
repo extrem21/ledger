@@ -4,4 +4,3 @@ target/
 *.iml
 .vscode/
 .DS_Store
-CLAUDE.md

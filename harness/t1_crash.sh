@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# T1 — crash harness (LEDGER_SPEC.md §9).
+# T1 — crash harness.
 #
 # Per trial: seed 50 orders against a live app instance, kill -9 the JVM at
 # a random point while the drain worker is (probably) still working through

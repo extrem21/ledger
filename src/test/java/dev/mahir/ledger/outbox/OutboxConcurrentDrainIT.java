@@ -13,7 +13,7 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * T6 from LEDGER_SPEC.md §9 — 4 concurrent drain workers against 10,000
+ * T6 — 4 concurrent drain workers against 10,000
  * pending events. Proves FOR UPDATE SKIP LOCKED: every event published
  * exactly once, no duplicate processed_events, no leftovers.
  *
